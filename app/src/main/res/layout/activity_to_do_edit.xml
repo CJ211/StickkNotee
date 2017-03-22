@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ashishrpa.easynote.ToDoEditActivity">
+    tools:context=".ToDoEditActivity">
     <EditText
         android:id="@+id/et_todo_edit_title"
         android:layout_width="match_parent"

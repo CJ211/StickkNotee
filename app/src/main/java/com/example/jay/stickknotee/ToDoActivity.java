@@ -25,17 +25,11 @@ import java.util.Date;
 import java.util.List;
 
 public class ToDoActivity extends AppCompatActivity implements View.OnClickListener{
-    EditText et_title, et_description, et_dueDate;
-    NumberPicker npMonth;
-    NumberPicker npDay;
-    NumberPicker npYear;
-    int mDay,mMonth,mYear;
-    long milliseconds_dueDate;
+
     private ListView listView;
     private DatabaseAccessToDo databaseAccessToDo;
     private List<ToDo> toDos;
-    final String[] monthValues= {"JAN","FEB", "MAR", "APR", "MAY","JUN","JULY", "AUG", "SEP", "OCT","NOV","DEC"};
-    private static DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyy 'at' hh:mm aaa");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -175,19 +169,6 @@ public class ToDoActivity extends AppCompatActivity implements View.OnClickListe
             });
             return convertView;
         }
-    }
-
-
-    public long prepareDateInLong(){
-        String string_date =mDay+"-"+mMonth+"-"+mYear;
-        SimpleDateFormat f = new SimpleDateFormat("dd-MM-yyyy");
-        try {
-            Date d = f.parse(string_date);
-            milliseconds_dueDate = d.getTime();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return milliseconds_dueDate;
     }
 }
 

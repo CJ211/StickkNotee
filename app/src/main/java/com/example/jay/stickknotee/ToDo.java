@@ -30,7 +30,7 @@ public class ToDo implements Serializable {
     }
 
     private static DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyy 'at' hh:mm aaa");
-    private static DateFormat dateFormatDueDate = new SimpleDateFormat("dd/MM/yyy");
+    private static DateFormat dateFormatDueDate = new SimpleDateFormat("dd/MM/yyyy");
 
     public ToDo() {
         this.date = new Date();
@@ -46,7 +46,6 @@ public class ToDo implements Serializable {
     //    public String getToDoDate() { return dateFormat.format(toDoDate); }
     public String getToDoDate() { return dateFormatDueDate.format(toDoDate); }
 
-    public void setToDoDate(long toDoDate) { this.toDoDate = new Date(toDoDate); }
 
     public String getDate() {
         return dateFormat.format(date);

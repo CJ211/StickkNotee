@@ -71,7 +71,7 @@ public class ToDoEditActivity extends AppCompatActivity implements View.OnClickL
                 Date dDate = new Date(toDoFill.getTimeDueDate());
                 this.npDay.setValue(dDate.getDay());
                 this.npMonth.setValue(dDate.getMonth());
-                this.npDay.setValue(dDate.getYear());
+                this.npYear.setValue(dDate.getYear());
             }
         }
         //Set a value change listener for NumberPicker

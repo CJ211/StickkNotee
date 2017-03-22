@@ -6,8 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
-    public static final String DATABASE = "easynotes.db";
-    public static final String TABLE_NOTES = "notes";
+    public static final String DATABASE = "stickknotee.db";
     public static final String TABLE_MEMO = "memo";
     public static final String TABLE_TODO = "todo";
 
@@ -20,7 +19,6 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE memo(date INTEGER PRIMARY KEY, memo TEXT);");
-        db.execSQL("CREATE TABLE notes(date INTEGER PRIMARY KEY, note TEXT);");
         db.execSQL("CREATE TABLE todo(date INTEGER PRIMARY KEY, title TEXT, description TEXT, toDoDate INTEGER, status INTEGER);");
     }
 
